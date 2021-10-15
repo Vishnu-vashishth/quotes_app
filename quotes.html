@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote generator</title>
+    <link rel="stylesheet" href="new.css">
+    <script src="https://kit.fontawesome.com/f0faa7be2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <button id="btn" >Generate Quote</button>
+        <p><i class="fas fa-quote-left"></i>
+       <span id="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure possimus, obcaecati optio similique dolore laboriosam et id voluptatem suscipit.</span></p>
+       <span id="author">-vishnu vashishth</span>
+    </div>
+</body>
+</html>
+
+<script >
+   const text = document.getElementById("text");
+   const author = document.getElementById("author");
+   const btn = document.getElementById("btn");
+
+   const quoteStatements = [
+{
+statement: "I think the perfection of love is that it’s not perfect.",
+author: "-Taylor Swift"
+},
+{
+statement: "The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart.",
+author: "-Helen Keller"
+},
+{
+statement: "Life without love is like a tree without blossoms or fruit.",
+author: "-Khalil Gibran"
+},
+{
+statement: "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.",
+author: "-Maya Angelou"
+},
+{
+statement: "To love or have loved, that is enough. Ask nothing further. There is no other pearl to be found in the dark folds of life.",
+author: "-Victor Hugo"
+},
+{
+statement: "You are my heart, my life, my one and only thought.",
+author: "-Arthur Conan Doyle"
+},
+{
+statement: "To love or have loved, that is enough. Ask nothing further. There is no other pearl to be found in the dark folds of life.",
+author: "-Victor Hugo"
+},
+{
+statement: "When I tell you I love you, I don’t say it out of habit. I say it to remind you that you’re the best thing that ever happened to me.",
+author: "-Onyebuchi Princewill"
+}
+
+];
+
+btn.addEventListener("click",()=>{
+    
+    // btn.style.padding="8px";
+    var x = Math.floor(Math.random()*quoteStatements.length)
+    text.innerHTML=quoteStatements[x].statement;
+    author.innerHTML=quoteStatements[x].author;});
+ 
+
+</script>
